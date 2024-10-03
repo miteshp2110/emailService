@@ -18,7 +18,7 @@ async function sendMail(recipient,subject,text) {
         from: process.env.SERVICE_EMAIL,
         to: recipient,
         subject: subject,
-        text: text,
+        html: text,
     }
 
     try{
