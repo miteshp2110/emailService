@@ -2,7 +2,7 @@ const dotenv = require("dotenv");
 const otpForForgotPasssword = require('../EmailTemplate/forgotPassword')
 
 dotenv.config();
-const sendMail = require("../utils/sendMail")
+const sendMail = require("../utils/sendMail");
 
 const otp = (async (req,res)=>{
     const key = req.header('Authorization');
@@ -21,5 +21,6 @@ const otp = (async (req,res)=>{
         return res.status(500).send({"Error":"Something went wrong"})
     }
 })
+
 
 module.exports = otp;
