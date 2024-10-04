@@ -1,11 +1,14 @@
 const amqp = require("amqplib");
+const dotenv = require("dotenv");
 const notificationMail = require('../EmailTemplate/notificationMail')
 const queue = "notificationQueue";
 const sendMail = require('../utils/sendMail')
+dotenv.config();
+const rabbitMq_url = `amqp://${process.env.RABBITMQ_HOST}`
 
 async function consumeMail(){
     try{
-        const connection = await amqp.connect("amqp://localhost")
+        const connection = await amqp.connect(rabbitMq_url)
         const channel = await connection.createChannel()
 
         await channel.assertQueue(queue,{durable:true})
