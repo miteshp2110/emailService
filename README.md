@@ -35,6 +35,9 @@ The OTP emails are sent synchronously, while notification emails are queued in R
 
 ## Request Body Format
 
+## All request require a api key which is in headers 
+    'Authorization : Api_key'
+
 - ### Forgot Password OTP
     ```json
     {
