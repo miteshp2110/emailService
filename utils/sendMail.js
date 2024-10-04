@@ -13,8 +13,8 @@ async function sendMail(recipient, subject, html) {
     connectionTimeout: 10000, // Default is 10000 (10 seconds)
     greetingTimeout: 10000, // Default is 10000 (10 seconds)
     socketTimeout: 20000, // Default is 20000 (20 seconds)
-    debug: true, // show debug
-    logger: true, // log information in console
+    // debug: true, // show debug
+    // logger: true, // log information in console
   });
 
   const mailOptions = {
