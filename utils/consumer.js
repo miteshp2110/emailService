@@ -4,7 +4,8 @@ const notificationMail = require('../EmailTemplate/notificationMail')
 const queue = "notificationQueue";
 const sendMail = require('../utils/sendMail')
 dotenv.config();
-const rabbitMq_url = `amqp://${process.env.RABBITMQ_HOST}`
+// const rabbitMq_url = `amqp://${process.env.RABBITMQ_HOST}`
+const rabbitMq_url = `amqp://${process.env.RABBITMQ_USER}:${process.env.RABBITMQ_PASSWORD}@${process.env.RABBITMQ_HOST}:5672`;
 
 async function consumeMail(){
     try{

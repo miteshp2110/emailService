@@ -81,7 +81,7 @@ const notificationMail = (notificationTitle,notificationBody,companyName,recipie
 
         <!-- Footer Section -->
         <div class="footer">
-            &copy; 2024 ${companyName}. All Rights Reserved. 
+            &copy; 2025 ${companyName}. All Rights Reserved. 
             <br>
         </div>
     </div>

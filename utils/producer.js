@@ -4,7 +4,7 @@ const exchange = "notificationExchange"
 const routingKey = "addNotification";
 const queue = "notificationQueue";
 dotenv.config();
-const rabbitMq_url = `amqp://${process.env.RABBITMQ_HOST}`
+const rabbitMq_url = `amqp://${process.env.RABBITMQ_USER}:${process.env.RABBITMQ_PASSWORD}@${process.env.RABBITMQ_HOST}:5672`;
 
 async function addNotification(emailData) {
     try{
